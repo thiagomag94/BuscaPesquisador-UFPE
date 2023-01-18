@@ -34,7 +34,7 @@ export const FormSearch = (props:FormSearchType) =>{
 
     return(
         <>
-        <form action=" " method="get" className="absolute flex flex-col w-11/12 h-fit py-6 px-4 top-32 bg-amber-500/70 backdrop-blur-sm  lg:w-2/6" >
+        <form action=" " method="get" className="flex flex-col w-11/12 h-fit py-6 px-4 bg-amber-500/70 backdrop-blur-sm  lg:w-2/6" >
             <label className="text-white mb-4 border-b-2 py-2">{label}</label>
             <div className="flex flex-col justify-around items-center">
                     <InputSearch label={label} placeholder={placeholder}/>

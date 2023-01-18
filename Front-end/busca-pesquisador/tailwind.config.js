@@ -5,12 +5,15 @@ module.exports = {
     "./components/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    fontFamily: {
+    extend:{
+      backgroundImage: {
+        
+        'imagem':
+        "linear-gradient(to right, rgb(4, 4, 4),rgba(0,0,0,0.6)), url('../public/images/ufpe.jpg') ",
       
-    },
-    extend: {
-      
-    },
+    
+    }
+    }
   },
   plugins: [],
 }
