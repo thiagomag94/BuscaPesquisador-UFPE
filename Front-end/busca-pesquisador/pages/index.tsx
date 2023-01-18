@@ -13,7 +13,7 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <main className={`w-full min-h-screen  flex flex-col items-center`}>
+      <main className={`w-full bg-cover bg-center min-h-screen flex flex-col items-center bg-[url('../public/images/ufpe.jpg')]`}>
         <Navbar/>
         <FormSearch label ={"Digite o nome do pesquisador:"} placeholder={"Buscar pesquisador"}/>
         

@@ -10,17 +10,17 @@ export const Navbar = () =>{
         isClicked === true && setClicked(false)
     }
     return(
-        <nav className="w-full h-fit flex flex-col items-center bg-red-700 text-white   border-b-4 border-amber-500 transition-transform ">
+        <nav className="w-full h-fit flex flex-col items-center bg-red-700 text-white transition-all duration-300 shadow-md hover:ease-in">
             <header className="w-full flex justify-between items-center h-full p-2">
                 <Image src={'/images/propesqi.png'} alt="logo propesqi" width={100} height={50} className="ml-4"/>
                 <button className="font-bold text-lg mr-4" onClick={handleButtonNav}><MenuIcon fontSize="large"/></button>
             </header>
             {isClicked === true && 
-            <div className="flex items-center w-full bg-amber-500 py-6 ">
-                <ul className="w-full flex flex-col justify-center items-center gap-4">
-                    <li><a href="/">Home</a></li>
-                    <li><a href="/">Buscar Pesquisador</a></li>
-                    <li><a href="/">Sobre</a></li>
+            <div className="flex items-center w-full bg-red-500 shadow-lg">
+                <ul className="w-full flex flex-col justify-center items-center">
+                    <li className="border-b border-red-400 py-2 h-full text-center w-full cursor-pointer hover:bg-red-400"><a href="/">Home</a></li>
+                    <li className="border-b border-red-400 py-2 text-center w-full hover:bg-red-400"><a href="/">Buscar Pesquisador</a></li>
+                    <li className="border-b border-red-400 py-2 text-center w-full hover:bg-red-400" ><a href="/">Sobre</a></li>
                 </ul>
             </div>}
         </nav>

@@ -1,6 +1,6 @@
 import { FormSearchType } from "./FormSearchType"
 import AddCircleIcon from '@mui/icons-material/AddCircle';
-import { InputSearch } from "../InputSearch";
+import { InputSearch } from "../inputSearch";
 import { useEffect, useState } from "react";
 
 export const FormSearch = (props:FormSearchType) =>{
@@ -34,12 +34,14 @@ export const FormSearch = (props:FormSearchType) =>{
 
     return(
         <>
-        <form action=" " method="get" className="absolute flex flex-col w-11/12 h-fit py-10 px-4 top-80 bg-amber-500 " >
-            <label className="text-white mb-4">{label}</label>
+        <form action=" " method="get" className="absolute flex flex-col w-11/12 h-fit py-6 px-4 top-32 bg-amber-500/70 backdrop-blur-sm  lg:w-2/6" >
+            <label className="text-white mb-4 border-b-2 py-2">{label}</label>
             <div className="flex flex-col justify-around items-center">
                     <InputSearch label={label} placeholder={placeholder}/>
                     {inputArrays.map(input=><InputSearch label={label} placeholder={placeholder}/>)}
-                    <AddCircleIcon className="ml-4 text-white cursor-pointer" onClick={handleAddInput}></AddCircleIcon>
+                    <p className="text-white font-normal ">Adicionar novo pesquisador</p>
+                    <AddCircleIcon fontSize="large" className="ml-4 text-white cursor-pointer mt-2 " onClick={handleAddInput}></AddCircleIcon>
+                    <button className="bg-red-500 rounded-lg  py-2 text-white w-2/6 mt-4">Buscar</button>
             </div>
         </form>
         </>
