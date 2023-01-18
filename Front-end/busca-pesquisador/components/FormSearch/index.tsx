@@ -1,6 +1,6 @@
 import { FormSearchType } from "./FormSearchType"
 import AddCircleIcon from '@mui/icons-material/AddCircle';
-import { InputSearch } from "../inputSearch";
+import { InputSearch } from "../InputSearch";
 import { useEffect, useState } from "react";
 
 export const FormSearch = (props:FormSearchType) =>{
