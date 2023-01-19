@@ -3,6 +3,7 @@ import { FormSearch } from '../components/FormSearch'
 import { Navbar } from '../components/Navbar'
 import HomeIcon from '@mui/icons-material/Home';
 import SearchIcon from '@mui/icons-material/Search';
+import Link from 'next/link';
 
 
 
@@ -17,13 +18,18 @@ export default function Home() {
       </Head>
       <main className={`w-full min-h-screen flex flex-col bg-cover bg-center bg-imagem lg:overflow-x-hidden `}>
         <Navbar/>
-        <div className='ml-10 lg:w-4/5 lg:flex lg:flex-col lg:ml-64 lg:mt-64'>
+        <div className='ml-10 lg:w-4/5 lg:flex lg:flex-col lg:ml-64 lg:mt-64 lg:animate-fade'>
           <h1 className= "text-white lg:text-5xl mb-4">SisPesq</h1>
-          <p className="text-amber-500 lg:text-3xl mb-4">SISTEMA DE CONSULTA DE PESQUISADORES DA UFPE</p>
+          <p className="text-red-500 lg:text-3xl mb-4">SISTEMA DE CONSULTA DE PESQUISADORES DA UFPE</p>
           <p className="text-md text-white">Como você deseja começar?</p>
-          <div id="button-container" className='flex mt-4 '>
-            <button type="button" className="text-white bg-amber-500/70 w-1/6 mr-4 py-4 shadow-lg backdrop-blur-sm rounded-sm">Buscar por nome</button>
-            <button type="button" className="text-white bg-amber-500/70 w-1/6 py-4 shadow-lg backdrop-blur-sm rounded-sm">Lista de pesquisadores</button>
+          <div id="button-container" className='flex mt-4 gap-16 '>
+            <Link href={{pathname: 'BuscaNome'}}>
+              <button type="button" className="text-white  bg-red-500/70 w-full mr-4 p-4 drop-shadow-lg backdrop-blur-sm rounded-sm lg:hover:bg-red-600">Buscar por nome</button>
+            </Link>
+            <Link href={{pathname: 'BuscaNome'}}>
+              <button type="button" className="text-white  bg-red-500/70 w-full  mr-4 p-4 drop-shadow-lg backdrop-blur-sm rounded-sm  lg:hover:bg-red-600">Lista de pesquisadores</button>
+            </Link>
+            
           </div>
 
         </div>
