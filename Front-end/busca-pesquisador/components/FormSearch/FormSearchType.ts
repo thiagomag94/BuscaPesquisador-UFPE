@@ -1,5 +1,6 @@
 export interface FormSearchType {
     label: string,
-    placeholder:string
-    submit: any
+    placeholder:string,
+    isClicked: boolean,
+    setClicked: any
 }
