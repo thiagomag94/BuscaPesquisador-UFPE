@@ -12,8 +12,6 @@ app.use(express.urlencoded({
 )
 
 app.use(express.json())
-
-
 const professores = []
 
 //conexão com banco

@@ -3,13 +3,13 @@ import { FormSearch } from "../../components/FormSearch"
 import { Navbar } from "../../components/Navbar"
 import { Researcher } from "../../components/Researcher"
 import { useEffect, useState } from "react";
-import Image from "next/image";
 
-export default function BuscaNome(){
+export default function BuscaNome(props:any){
   const [isClicked, setClicked] = useState(false)
+  const ListResearcher = ["Pedro Valadão Carelli", 'Alfredo Macedo Gomes']
 
   
-    return(
+  return(
         <>
       <Head>
         <title>Create Next App</title>
@@ -19,14 +19,13 @@ export default function BuscaNome(){
       </Head>
       <main className={`w-full min-h-screen flex flex-col bg-cover bg-center bg-imagem  lg:overflow-x-hidden `}>
         <Navbar/>  
-        <div className="flex flex-col max-h-11/12 justify-center items-center mt-10">
-          {isClicked === null && <Image src={'/images/spin.gif'} width={100} height={100} alt={'gif-animado'}/>}
-          {isClicked === false && <FormSearch label={'Buscar Pesquisadores'} placeholder={'Copie e cole a lista de nomes dos pesquisadores...'} isClicked={isClicked} setClicked = {setClicked}/>}
-          {isClicked === true && <div className="flex flex-col w-3/6  p-6 animate-fade">
+        <div className="flex flex-col max-h-11/12 justify-center items-center mt-24">
+          {isClicked === false && <FormSearch label={'Buscar Pesquisadores'} placeholder={'Copie e cole a lista de nomes dos pesquisadores...'}  isClicked ={isClicked} setClicked = {setClicked}/>}
+          {isClicked === true && 
+          <div className="flex flex-col w-3/6  p-6">
             <h1 className="text-white text-3xl mb-6 drop-shadow-md">Pesquisadores que possuem vínculo com a UFPE:</h1>
-            <div className="grid grid-rows-4">
-              <Researcher/>
-              <Researcher/>
+            <div className="flex flex-col justify-center items-center">
+              {ListResearcher.map((nome, index)=><Researcher index={index} nome={nome}/>)} 
             </div>
           </div>}
         </div>

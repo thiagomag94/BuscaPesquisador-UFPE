@@ -1,12 +1,14 @@
 import { FormSearchType } from "./FormSearchType"
 import AddCircleIcon from '@mui/icons-material/AddCircle';
 import { InputSearch } from "../InputSearch";
+import { RequestAPI } from "../../services/RequestAPI";
+import { useState } from "react";
 
 
 export const FormSearch = (props:FormSearchType) =>{
     const {label, placeholder, isClicked, setClicked} = props
   
-
+    const [nomes, setNomes] = useState([])
   
     const handleSubmit = () =>{
         
@@ -14,6 +16,7 @@ export const FormSearch = (props:FormSearchType) =>{
         isClicked === false && console.log(isClicked)
         isClicked === true && console.log(isClicked)
         isClicked === true && setClicked(false)
+        RequestAPI(nomes)
     }
     return(
         <>
