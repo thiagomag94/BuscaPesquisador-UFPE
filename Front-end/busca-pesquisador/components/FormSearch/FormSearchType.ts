@@ -3,5 +3,10 @@ export interface FormSearchType {
     placeholder:string,
     isClicked: boolean,
     setClicked: any,
+    ListResearcher: any,
+    setListResearcher: any,
+    error: any,
+    setError: any,
+   
     
 }

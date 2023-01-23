@@ -11,6 +11,12 @@ app.use(express.urlencoded({
     })
 )
 
+app.use(function(req, res, next) {
+    res.header("Access-Control-Allow-Origin", "*");
+    res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
+    next();
+  });
+
 app.use(express.json())
 const professores = []
 
@@ -36,19 +42,7 @@ fs.createReadStream('database.xlsx')
     })
 
 //rotas da api
-app.post('/banco', (req,res)=>{
-    try{
-        console.log
-        professores.map(async(professor)=>{
-            await professoresdb.create(professor)
-        })
-        
-        res.status(201).json({message: 'Conectado com sucesso'})
-    } catch(error){
-        res.status(500).json({ error: error})
-    }
 
-})
 app.get('/', async(req, res)=>{
     try{
         const resultado_query = await professoresdb.find()
@@ -63,7 +57,12 @@ app.get('/', async(req, res)=>{
 app.get('/professor', (req, res)=>{
     const nome = req.query.nome
     const arrayfiltered = professores.filter(professor=> professor.NOME === nome)
-    res.json({professor: arrayfiltered[0]})
+    if(arrayfiltered.lenght === 0){
+        res.json({error: "Nome não encontrado"})
+    }else{
+        res.json({professor: arrayfiltered[0]})
+    }
+    
     
 })
 

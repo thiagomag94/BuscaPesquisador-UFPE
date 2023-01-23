@@ -6,10 +6,14 @@ module.exports = {
   ],
   theme: {
     extend:{
+      fontFamily: {
+        'Roboto': 'Roboto, sans-serif'
+      },
       backgroundImage: {
         
         'imagem':
         "linear-gradient(to right, rgb(4, 4, 4),rgba(0,0,0,0.6)), url('../public/images/ufpe.jpg') ",
+        
       
     
     },

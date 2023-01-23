@@ -20,7 +20,7 @@ export const Navbar = () =>{
     }
 
     return(
-        <nav className="w-full h-fit flex flex-col items-center bg-transparent text-white transition-all duration-300  hover:ease-in lg:flex-row overflow-hidden">
+        <nav className="w-full h-fit flex flex-col items-center bg-transparent text-white fixed transition-all duration-300  hover:ease-in lg:flex-row overflow-hidden">
             <header className="w-full flex justify-between items-center h-full p-2">
                 <Image src={'/images/propesqi.png'} alt="logo propesqi" width={100} height={50} className="ml-4"/>
                 <button className={`font-bold text-lg mr-4 ${isVisible}`} onClick={handleButtonNav}><MenuIcon fontSize="large"/></button>
