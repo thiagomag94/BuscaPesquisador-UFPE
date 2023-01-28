@@ -54,13 +54,13 @@ app.get('/', async(req, res)=>{
     
 })
     
-app.get('/professor', (req, res)=>{
-    const nome = req.query.nome
-    const arrayfiltered = professores.filter(professor=> professor.NOME === nome)
+app.post('/professor', (req, res)=>{
+    const nomeRequested = req.body.professores
+    const arrayfiltered = professores.filter(professor=>  nomeRequested.includes(professor.NOME))
     if(arrayfiltered.lenght === 0){
         res.json({error: "Nome não encontrado"})
     }else{
-        res.json({professor: arrayfiltered[0]})
+        res.json({professores:arrayfiltered})
     }
     
     

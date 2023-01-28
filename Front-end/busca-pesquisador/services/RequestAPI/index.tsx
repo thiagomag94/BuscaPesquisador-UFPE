@@ -1,12 +1,16 @@
 import axios from "axios";
 
 
-export const RequestAPI = async(nome:string) => {
-     const res =  await axios.get(`http://localhost:3004/professor`, {
-          params: {
-               nome: nome
-          }
-     })
+export const RequestAPI = async(listnames:string[]) => {
+
+     const data = {
+          professores: listnames
+     }
+
+     
     
-     return res.data.professor
+     const response =  await axios.post(`http://localhost:3004/professor`, data
+     )
+    console.log(response.data.professores)
+     return response.data.professores
 }

@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "nodemon src/index.js"
+    "dev": "nodemon src/index.js",
+    "build": ""
   },
   "keywords": [],
   "author": "",
@@ -15,6 +16,7 @@
     "mongoose": "^6.8.3"
   },
   "devDependencies": {
+    "babel-cli": "^6.26.0",
     "nodemon": "^2.0.16"
   }
 }

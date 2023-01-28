@@ -4,18 +4,16 @@ import { Navbar } from "../../components/Navbar"
 import { Researcher } from "../../components/Researcher"
 import { useEffect, useState } from "react";
 import { BuscaNomeType } from "./BuscaNomeType";
+import Image from "next/image";
+
 
 export default function BuscaNome(props:BuscaNomeType){
   const [isClicked, setClicked] = useState(false)
-  const [ListResearcher, setListResearcher] = useState<{_id:string, NOME:string, EMAIL_PRINCIPAL:string, EMAIL_SECUNDARIO:string, DEPARTAMENTO:string, CENTRO:string }[]>([])
+  const [ListResearcher, setListResearcher] = useState<{NOME:string, EMAIL_PRINCIPAL:string, EMAIL_SECUNDARIO:string, DEPARTAMENTO:string, CENTRO:string }[]>([])
   const [error, setError]= useState()
 
   //const ListResearcher = ["Pedro Valadão Carelli", 'Alfredo Macedo Gomes', "Joaquim Martins Filho", "Ranilson Filho Martins"]
 
-  useEffect(()=>{
-    console.log(ListResearcher)
-    ListResearcher[0] && console.log(ListResearcher[0].NOME)
-  }, [ListResearcher])
   return(
         <>
       <Head>
@@ -35,12 +33,13 @@ export default function BuscaNome(props:BuscaNomeType){
               Pesquisadores que possuem vínculo com a UFPE:
               <div className="border-b-2 border-red-500 w-full mb-6 bg-red-500"></div>
             </div>
-            {ListResearcher.map((teacherName, index)=><Researcher index={index} nome={teacherName.NOME}/>)} 
+            {ListResearcher.map((teacherName, index)=>(<Researcher key={index} nome={teacherName.NOME} emailPrincipal={teacherName.EMAIL_PRINCIPAL} emailSecundario={teacherName.EMAIL_SECUNDARIO} Centro={teacherName.CENTRO} Departamento={teacherName.DEPARTAMENTO}/>))}
             
-           
           </div>}
+          {isClicked ===true && ListResearcher.length===0 && <Image src={'/images/spin.gif'} alt="logo propesqi" width={100} height={50} className="ml-4"/>}
           {/*ListResearcher.length===0 && <p className="text-red-500 font-light">Desculpe. Nenhum Pesquisador da UFPE encontrado.</p> */}
         </div>
+
       </main>
     </>
     )

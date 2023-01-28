@@ -3,7 +3,7 @@ export interface FormSearchType {
     placeholder:string,
     isClicked: boolean,
     setClicked: any,
-    ListResearcher: any,
+    ListResearcher: {NOME:string, EMAIL_PRINCIPAL:string, EMAIL_SECUNDARIO:string, DEPARTAMENTO:string, CENTRO:string }[]
     setListResearcher: any,
     error: any,
     setError: any,
