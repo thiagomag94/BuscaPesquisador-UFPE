@@ -13,7 +13,7 @@ export const InputSearch = (props:InputSearchType) =>{
 
     return(
         <>
-           <textarea id="main-input" className = "mt-2 mb-4 w-full h-40 rounded-md p-2 outline-none border-1 ring-1 ring-slate-500 bg-transparent text-white placeholder-red-200 xl:p-4 xl:h-64" placeholder={placeholder} onChange={handleChange}></textarea>
+           <textarea id="main-input" className = "mt-2 mb-4 w-full h-40 rounded-md p-2 outline-none border-1 ring-1 ring-slate-500 bg-transparent text-white placeholder-red-200 2xl:p-4 2xl:h-64" placeholder={placeholder} onChange={handleChange}></textarea>
         </>
         
     )

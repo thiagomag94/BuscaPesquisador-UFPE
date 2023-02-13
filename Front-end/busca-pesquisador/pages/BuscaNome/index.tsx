@@ -5,15 +5,18 @@ import { Researcher } from "../../components/Researcher"
 import { useEffect, useState } from "react";
 import { BuscaNomeType } from "./BuscaNomeType";
 import Image from "next/image";
+import { InfoModal } from "../../components/modal";
 
 
 export default function BuscaNome(props:BuscaNomeType){
   const [isClicked, setClicked] = useState(false)
+  const [isClickedInfo, setClickedInfo] = useState(false)
   const [ListResearcher, setListResearcher] = useState<{NOME:string, EMAIL_PRINCIPAL:string, EMAIL_SECUNDARIO:string, DEPARTAMENTO:string, CENTRO:string }[]>([])
   const [error, setError]= useState()
+  const [opacity, setOpacity] = useState('')
 
   //const ListResearcher = ["Pedro Valadão Carelli", 'Alfredo Macedo Gomes', "Joaquim Martins Filho", "Ranilson Filho Martins"]
-
+  
   return(
         <>
       <Head>
@@ -26,7 +29,7 @@ export default function BuscaNome(props:BuscaNomeType){
         <Navbar/>  
        
         <div className="flex flex-col max-h-11/12 justify-center items-center mt-40">
-          {isClicked === false && <FormSearch label={'Buscar Pesquisadores'} placeholder={'Copie e cole a lista de nomes dos pesquisadores...'}  isClicked ={isClicked} setClicked = {setClicked} ListResearcher = {ListResearcher} setListResearcher = {setListResearcher} error= {error} setError = {setError}/>}
+          {isClicked === false && <FormSearch label={'Buscar Pesquisadores'} placeholder={'Copie e cole a lista de nomes dos pesquisadores...'}  isClicked ={isClicked} setClicked = {setClicked} ListResearcher = {ListResearcher} setListResearcher = {setListResearcher} error= {error} setError = {setError} isClickedInfo={isClickedInfo} setClickedInfo={setClickedInfo} opacity={opacity} setOpacity={setOpacity}/>}
           {isClicked === true && 
           <div className="flex flex-col w-11/12 lg:w-3/6  p-6">
             <div className="flex flex-col text-white text-lg lg:text-3xl mb-4 drop-shadow-md gap gap-6">
@@ -39,7 +42,7 @@ export default function BuscaNome(props:BuscaNomeType){
           {isClicked ===true && ListResearcher.length===0 && <Image src={'/images/spin.gif'} alt="logo propesqi" width={100} height={50} className="ml-4"/>}
           {/*ListResearcher.length===0 && <p className="text-red-500 font-light">Desculpe. Nenhum Pesquisador da UFPE encontrado.</p> */}
         </div>
-
+        {isClickedInfo === true && <InfoModal opacityBlur={opacity} setOpacityBlur={setOpacity} isClickedInfo = {isClickedInfo} setClickedInfo = {setClickedInfo}/>}
       </main>
     </>
     )

@@ -18,7 +18,8 @@ module.exports = {
     
     },
     animation: {
-      fade: 'fadeIn 1s ease-in-out',
+      fade: 'fadeIn 0.4s ease-in-out',
+      
     },
 
     // that is actual animation

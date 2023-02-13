@@ -21,15 +21,15 @@ export default function Home() {
       <main className={`w-full font-Roboto min-h-screen flex flex-col bg-cover bg-center bg-imagem lg:overflow-x-hidden `}>
         <Navbar/>
         <div className='ml-10 lg:w-4/5 lg:flex lg:flex-col lg:ml-64 lg:mt-72 lg:animate-fade'>
-          <h1 className= "text-white lg:text-5xl mb-4">SisPesq</h1>
-          <p className="text-red-500 lg:text-3xl mb-4">SISTEMA DE CONSULTA DE PESQUISADORES DA UFPE</p>
+          <h1 className= "text-white lg:text-5xl mb-2">SisPesq</h1>
+          <p className="text-red-500 lg:text-3xl mb-4 xl:mb-12">SISTEMA DE CONSULTA DE PESQUISADORES DA UFPE</p>
           <p className="text-md text-white">Como você deseja começar?</p>
           <div id="button-container" className='flex mt-4 gap-16 '>
             <Link href={{pathname: 'BuscaNome'}}>
-              <button type="button" className="text-white  bg-red-500/70 w-full mr-4 p-4 drop-shadow-lg backdrop-blur-sm rounded-sm lg:hover:bg-red-600">Buscar por nome</button>
+              <button type="button" className="text-white  bg-red-500/70 w-full mr-4 p-4 drop-shadow-lg backdrop-blur-sm rounded-md outline-none lg:hover:bg-red-600">Buscar por nome</button>
             </Link>
             <Link href={{pathname: 'BuscaNome'}}>
-              <button type="button" className="text-white  bg-red-500/70 w-full  mr-4 p-4 drop-shadow-lg backdrop-blur-sm rounded-sm  lg:hover:bg-red-600">Lista de pesquisadores</button>
+              <button type="button" className="text-white  bg-red-500/70 w-full  mr-4 p-4 drop-shadow-lg backdrop-blur-sm rounded-md outline-none  lg:hover:bg-red-600">Lista de pesquisadores</button>
             </Link>
             
           </div>

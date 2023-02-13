@@ -7,6 +7,10 @@ export interface FormSearchType {
     setListResearcher: any,
     error: any,
     setError: any,
+    isClickedInfo:boolean,
+    setClickedInfo:any,
+    opacity: string,
+    setOpacity:any
    
     
 }
