@@ -24,6 +24,9 @@ const professores = []
 const DB_USER = 'thiago'
 const DB_password = encodeURIComponent('FbVm2K35zb2A9Pt')
 
+//tirar o warning 
+mongoose.set("strictQuery", true);
+
 mongoose.connect(`mongodb+srv://${DB_USER}:${DB_password}@databaseufpe.xpguxkd.mongodb.net/?retryWrites=true&w=majority`)
 .then(()=>{
     app.listen(3000)
@@ -34,12 +37,12 @@ mongoose.connect(`mongodb+srv://${DB_USER}:${DB_password}@databaseufpe.xpguxkd.m
 })
 
 //leitura do csv
-fs.createReadStream('database.xlsx')
+/*fs.createReadStream('database.xlsx')
     .pipe(csv())
     .on('data', (rows)=>{
         professores.push(rows)
     }).on('end', ()=>{  
-    })
+    })*/
 
 //rotas da api
 
