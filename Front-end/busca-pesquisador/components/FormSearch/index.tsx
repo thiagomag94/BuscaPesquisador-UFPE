@@ -47,7 +47,7 @@ export const FormSearch = (props:FormSearchType) =>{
         
     return(
         <>
-        <form action="" method="POST" className="flex flex-col w-11/12 h-full py-6 px-4 border border-slate-700 bg-transparent backdrop-blur-lg rounded-lg backdrop-filter  lg:w-2/6 xl:p-8 2xl:mt-24"  onSubmit={handleSubmit}>
+        <form action="" method="POST" className="flex flex-col w-11/12 h-full py-6 px-4 border border-slate-700 bg-transparent backdrop-blur-lg rounded-lg backdrop-filter  lg:w-2/6 xl:p-8 3xl:mt-24"  onSubmit={handleSubmit}>
             <label className="text-white text-2xl mb-4 border-b py-2">{label}</label>
             <div className="flex flex-col justify-around items-center">
                     <InputSearch label={label} placeholder={placeholder} ListResearcher={ListResearcher} setListResearcher={setListResearcher} nomes = {nomes} setNomes = {setNomes}/>

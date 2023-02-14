@@ -18,7 +18,7 @@ export default function Home() {
         
       </Head>
   
-      <main className={`w-full font-Roboto min-h-screen flex flex-col bg-cover bg-center bg-imagem lg:overflow-x-hidden `}>
+      <main className={`w-full font-Roboto min-h-screen flex flex-col bg-cover bg-center bg-imagem lg:overflow-x-hidden debug-screens `}>
         <Navbar/>
         <div className='ml-10 lg:w-4/5 lg:flex lg:flex-col lg:ml-64 lg:mt-72 lg:animate-fade'>
           <h1 className= "text-white lg:text-5xl mb-2">SisPesq</h1>

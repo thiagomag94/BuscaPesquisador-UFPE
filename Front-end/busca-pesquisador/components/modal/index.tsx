@@ -19,8 +19,8 @@ export const InfoModal = (props:infoModalType) => {
             <div className="bg-red-100 rounded-lg w-3/6 flex flex-col self-center p-6 drop-shadow-xl 2xl:w-2/6">
 
                 
-                <ul className=" p-24 bg-red-100 2xl:py-24 leading-none">
-                    <h1 className="text-red-600  font-bold self-center mb-6 ">Informações</h1>
+                <ul className=" py-20 bg-red-100 3xl:py-24 leading-none">
+                    <h1 className="text-red-600  font-bold text-center mb-6 ">Informações</h1>
                     <li className="bg-red-200 rounded-lg  p-4 mb-4">Inserir nome completo</li>
                     
                     <li className="bg-red-200 rounded-lg  p-4 mb-4">Verificar se há áspas, vírgula ou qualquer outro sinal de pontuação</li>
