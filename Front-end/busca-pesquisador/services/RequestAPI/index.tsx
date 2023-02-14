@@ -9,7 +9,7 @@ export const RequestAPI = async(listnames:string[]) => {
 
      
     
-     const response =  await axios.post(`https://backend-sistema-dpq.vercel.app/professor`, data
+     const response =  await axios.post(`https://backend-sistema-dc1x4tgvs-thiagomag94.vercel.app/professor`, data
      )
     console.log(response.data.professores)
      return response.data.professores
