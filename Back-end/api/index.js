@@ -25,7 +25,7 @@ const DB_USER = 'thiago'
 const DB_password = encodeURIComponent('FbVm2K35zb2A9Pt')
 
 //tirar o warning 
-mongoose.set("strictQuery", true);
+mongoose.set("strictQuery", false);
 
 mongoose.connect(`mongodb+srv://${DB_USER}:${DB_password}@databaseufpe.xpguxkd.mongodb.net/?retryWrites=true&w=majority`)
 .then(()=>{
