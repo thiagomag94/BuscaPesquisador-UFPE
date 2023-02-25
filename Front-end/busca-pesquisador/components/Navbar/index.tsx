@@ -4,6 +4,7 @@ import HomeIcon from '@mui/icons-material/Home';
 import SearchIcon from '@mui/icons-material/Search';
 import ContactPageIcon from '@mui/icons-material/ContactPage';
 import { useState } from "react";
+import Link from "next/link";
 
 
 
@@ -31,9 +32,9 @@ export const Navbar = () =>{
                    
                 </div>
                 <ul className="w-full flex flex-col justify-center items-center lg:flex-row lg:animate-fade ">
-                    <li className="border-b border-red-400 py-4 h-full text-center  w-full cursor-pointer hover:bg-red-400 lg:hover:bg-red-500 lg:border-red-500"><a href="/"><HomeIcon className="mr-2"/>Home</a></li>
-                    <li className="border-b border-red-400 py-4 text-center w-full  hover:bg-red-400 lg:hover:bg-red-500 lg:border-red-500"><a href="/"><SearchIcon className="mr-2"/>Buscar</a></li>
-                    <li className="border-b border-red-400 py-4 text-center w-full  hover:bg-red-400 lg:hover:bg-red-500 lg:border-red-500" ><a href="/"><ContactPageIcon className="mr-2"/>Sobre</a></li>
+                    <li className="border-b border-red-400 py-4 h-full text-center  w-full cursor-pointer hover:bg-red-400 lg:hover:bg-red-500 lg:border-red-500"><Link href="/"><HomeIcon className="mr-2"/>Home</Link></li>
+                    <li className="border-b border-red-400 py-4 text-center w-full  hover:bg-red-400 lg:hover:bg-red-500 lg:border-red-500"><Link href="/"><SearchIcon className="mr-2"/>Buscar</Link></li>
+                    <li className="border-b border-red-400 py-4 text-center w-full  hover:bg-red-400 lg:hover:bg-red-500 lg:border-red-500" ><Link href="/"><ContactPageIcon className="mr-2"/>Sobre</Link></li>
                 </ul>
                 
             </div>}
