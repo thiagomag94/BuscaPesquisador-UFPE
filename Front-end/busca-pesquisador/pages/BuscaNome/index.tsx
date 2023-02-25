@@ -3,7 +3,7 @@ import { FormSearch } from "../../components/FormSearch"
 import { Navbar } from "../../components/Navbar"
 import { Researcher } from "../../components/Researcher"
 import { useEffect, useState } from "react";
-import { BuscaNomeType } from "./BuscaNomeType";
+import BuscaNomeType from "../../components/FormSearch/BuscaNomeType";
 import Image from "next/image";
 import { InfoModal } from "../../components/modal";
 
