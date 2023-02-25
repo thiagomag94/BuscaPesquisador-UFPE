@@ -8,7 +8,7 @@ import Image from "next/image";
 import { InfoModal } from "../../components/modal";
 
 
-export default function BuscaNome(props:BuscaNomeType){
+export const BuscaNome = (props:BuscaNomeType) =>{
   const [isClicked, setClicked] = useState(false)
   const [isClickedInfo, setClickedInfo] = useState(false)
   const [ListResearcher, setListResearcher] = useState<{NOME:string, EMAIL_PRINCIPAL:string, EMAIL_SECUNDARIO:string, DEPARTAMENTO:string, CENTRO:string }[]>([])
