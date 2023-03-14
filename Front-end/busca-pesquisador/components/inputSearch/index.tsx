@@ -18,3 +18,5 @@ export const InputSearch = (props:InputSearchType) =>{
         
     )
 }
+
+export default InputSearch
