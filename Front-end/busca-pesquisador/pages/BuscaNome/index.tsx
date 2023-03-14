@@ -5,7 +5,7 @@ import { Researcher } from "../../components/Researcher"
 import { useEffect, useState } from "react";
 import BuscaNomeType from "../../components/FormSearch/BuscaNomeType";
 import Image from "next/image";
-import { InfoModal } from "../../components/modal";
+import { HelpModal } from "../../components/modal";
 
 
 const BuscaNome = (props:BuscaNomeType) =>{
@@ -42,7 +42,7 @@ const BuscaNome = (props:BuscaNomeType) =>{
           {isClicked ===true && ListResearcher.length===0 && <Image src={'/images/spin.gif'} alt="logo propesqi" width={100} height={50} className="ml-4"/>}
           {/*ListResearcher.length===0 && <p className="text-red-500 font-light">Desculpe. Nenhum Pesquisador da UFPE encontrado.</p> */}
         </div>
-        {isClickedInfo === true && <InfoModal opacityBlur={opacity} setOpacityBlur={setOpacity} isClickedInfo = {isClickedInfo} setClickedInfo = {setClickedInfo}/>}
+        {isClickedInfo === true && <HelpModal opacityBlur={opacity} setOpacityBlur={setOpacity} isClickedInfo = {isClickedInfo} setClickedInfo = {setClickedInfo}/>}
       </main>
     </>
     )
