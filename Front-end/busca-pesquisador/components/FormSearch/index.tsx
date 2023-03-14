@@ -1,10 +1,10 @@
 import { FormSearchType } from "./FormSearchType"
 import AddCircleIcon from '@mui/icons-material/AddCircle';
-import { InputSearch } from "../inputSearch";
+import { InputSearch } from "../InputSearch";
 import { RequestAPI } from "../../services/RequestAPI";
 import { useState } from "react";
-import InfoIcon from '@mui/icons-material/Info';
-import { InfoModal } from "../modal";
+import HelpIcon from '@mui/icons-material/Help';
+
 
 
 
@@ -53,7 +53,7 @@ export const FormSearch = (props:FormSearchType) =>{
                     <InputSearch label={label} placeholder={placeholder} ListResearcher={ListResearcher} setListResearcher={setListResearcher} nomes = {nomes} setNomes = {setNomes}/>
                     <button type ="submit" className="bg-red-500 rounded-lg outline-none py-2 text-white w-2/6 mt-4" >Buscar</button>
             </div>  
-            <InfoIcon className="text-white" onClick={HandleClickInfo}/>
+            <div className="flex justify-between w-1/6 text-slate-300 "><span>Ajuda</span><HelpIcon className="text-white" onClick={HandleClickInfo}/></div>
         </form>
         
         </>
