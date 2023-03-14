@@ -1,5 +1,4 @@
 import { FormSearchType } from "./FormSearchType"
-import AddCircleIcon from '@mui/icons-material/AddCircle';
 import { InputSearch } from "../InputSearch";
 import { RequestAPI } from "../../services/RequestAPI";
 import { useState } from "react";
