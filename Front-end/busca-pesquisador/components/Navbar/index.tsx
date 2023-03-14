@@ -31,10 +31,17 @@ export const Navbar = () =>{
                 <div className="lg:w-4 lg:border-t-[3.75rem] lg:border-t-red-500/70 lg:border-l-[3.5rem] lg:border-l-transparent  lg:-ml-14  lg:backdrop-blur-sm">
                    
                 </div>
-                <ul className="w-full flex flex-col justify-center items-center lg:flex-row lg:animate-fade ">
-                    <li className="border-b border-red-400 py-4 h-full text-center  w-full cursor-pointer hover:bg-red-400 lg:hover:bg-red-500 lg:border-red-500"><Link href="/"><HomeIcon className="mr-2"/>Home</Link></li>
-                    <li className="border-b border-red-400 py-4 text-center w-full  hover:bg-red-400 lg:hover:bg-red-500 lg:border-red-500"><Link href="/"><SearchIcon className="mr-2"/>Buscar</Link></li>
-                    <li className="border-b border-red-400 py-4 text-center w-full  hover:bg-red-400 lg:hover:bg-red-500 lg:border-red-500" ><Link href="/"><ContactPageIcon className="mr-2"/>Sobre</Link></li>
+                <ul className="w-full flex flex-col justify-center items-center lg:flex-row lg:justify-between lg:animate-fade ">
+                    <Link href={{pathname:"/"}}>
+                        <li className="border-b border-red-400 py-4 px-10 h-full text-center  w-full cursor-pointer hover:bg-red-400 lg:hover:bg-red-500 lg:border-red-500"><HomeIcon className="mr-2"/>Home</li>
+                    </Link>
+                    <Link href={{pathname:"/BuscaNome"}}>
+                        <li className="border-b border-red-400 py-4 px-10 text-center w-full  hover:bg-red-400 lg:hover:bg-red-500 lg:border-red-500"><SearchIcon className="mr-2"/>Buscar</li>
+                    </Link>
+                    <Link href={{pathname:"/BuscaNome"}}>
+                        <li className="border-b border-red-400 py-4 px-10 text-center w-full  hover:bg-red-400 lg:hover:bg-red-500 lg:border-red-500" ><ContactPageIcon className="mr-2"/>Sobre</li>
+                    </Link>
+                    
                 </ul>
                 
             </div>}
