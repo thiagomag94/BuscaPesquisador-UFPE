@@ -1,5 +1,5 @@
 import { FormSearchType } from "./FormSearchType"
-import { InputSearch } from "../InputSearch";
+import { InputSearch } from "../inputSearch"
 import { RequestAPI } from "../../services/RequestAPI";
 import { useState } from "react";
 import HelpIcon from '@mui/icons-material/Help';
